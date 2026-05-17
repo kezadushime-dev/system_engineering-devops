@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Sets permissions of hello to no permissions for owner and group, and all permissions for others.
+
+chmod 007 hello

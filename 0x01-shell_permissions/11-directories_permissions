@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Adds execute permission to all subdirectories of the current directory.
+
+find . -type d ! -name . -exec chmod a+x {} \;

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Changes the owner of the file hello to betty.
+
+chown betty hello
