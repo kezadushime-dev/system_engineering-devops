@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# A Bash script that stops the 4-to_infinity_and_beyond process using SIGTERM via kill
+
+# shellcheck disable=SC2009
+
+
+pid=$(ps -eo pid=,comm= | awk '$2=="4-to_infinity_and_beyond"{print $1; exit}')
+# Fallback: match by script name or command containing it
+if [ -z "$pid" ]; then
+  pid=$(ps -eo pid=,args= | awk '$2 ~ /4-to_infinity_and_beyond/ {print $1; exit}')
+fi
+
+if [ -n "$pid" ]; then
+  kill "$pid"
+fi
+
