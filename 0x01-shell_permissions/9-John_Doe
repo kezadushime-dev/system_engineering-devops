@@ -1,4 +1,2 @@
-#!/usr/bin/env bash
-# Sets the mode of the file hello to -rwxr-x-wx.
-
+#!/bin/bash
 chmod 753 hello

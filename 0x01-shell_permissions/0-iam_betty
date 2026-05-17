@@ -1,4 +1,2 @@
-#!/usr/bin/env bash
-# Switches the current user to betty.
-
+#!/bin/bash
 su betty
