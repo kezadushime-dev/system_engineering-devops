@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
-# A Bash script that forcefully kills the 7-highlander process using SIGKILL
+# Kills the 7-highlander process.
 
-pid=$(ps -eo pid=,comm= | awk '$2=="7-highlander"{print $1; exit}')
-if [ -z "$pid" ]; then
-  pid=$(ps -eo pid=,args= | awk '$2 ~ /7-highlander/ {print $1; exit}')
-fi
-
-if [ -n "$pid" ]; then
-  kill -9 "$pid"
-fi
+pkill -9 -f 7-highlander
 

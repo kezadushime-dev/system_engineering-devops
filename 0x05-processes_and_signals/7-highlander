@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-# A Bash script that loops indefinitely and ignores SIGTERM by printing a message
+# Displays To infinity and beyond indefinitely and ignores SIGTERM.
 
-trap 'echo "I am invincible!!!"' SIGTERM
+trap "echo I am invincible!!!" SIGTERM
 
-while true; do
+while true
+do
   echo "To infinity and beyond"
   sleep 2
 done

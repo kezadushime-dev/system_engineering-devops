@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# A Bash script that shows lines containing the word bash from the process list
-# shellcheck disable=SC2009
+# Displays lines containing the bash word.
 
-ps -eo user,pid,ppid,%cpu,%mem,vsz,rss,tty,stat,lstart,time,command | grep bash
+ps aux | grep bash
 
 
